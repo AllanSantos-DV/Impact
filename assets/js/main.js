@@ -275,6 +275,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   }
 
+  function verificarBloqueadorDeAnuncios() {
+    const adElement = document.createElement('div');
+    adElement.className = 'ad-banner';
+    adElement.style.display = 'none';
+    document.body.appendChild(adElement);
+
+    setTimeout(() => {
+      if (getComputedStyle(adElement).display === 'none') {
+        const adblockAlert = document.createElement('div');
+        adblockAlert.id = 'adblock-alert';
+        adblockAlert.innerHTML = 'Detectamos que você está usando um bloqueador de anúncios. Para uma melhor experiência no nosso site, por favor, desative o bloqueador de anúncios e recarregue a página.';
+        document.body.appendChild(adblockAlert);
+      }
+      adElement.remove();
+    }, 100);
+  }
+
+  // Chama a função de verificação do bloqueador de anúncios
+  verificarBloqueadorDeAnuncios();
+
   /**
    * Animation on scroll function and init
    */
