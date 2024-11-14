@@ -275,6 +275,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   }
 
+  if (typeof blockAdBlock === 'undefined') {
+    alert("Por favor, desative o bloqueador de anúncios.");
+  } else {
+    blockAdBlock.onDetected(() => {
+      alert("Por favor, desative o bloqueador de anúncios.");
+    });
+  }
+
   /**
    * Animation on scroll function and init
    */
