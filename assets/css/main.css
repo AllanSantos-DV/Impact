@@ -2667,18 +2667,3 @@ section {
 .footer .credits a {
   color: #fff;
 }
-
-#adblock-alert {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: #ffdddd;
-  color: #333;
-  padding: 20px;
-  text-align: center;
-  z-index: 9999;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-}
